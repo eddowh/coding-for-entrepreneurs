@@ -5,7 +5,7 @@ from django.db import models
 
 class Join(models.Model):
 
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     ip_address = models.CharField(max_length=120,
                                   # null=True, blank=True,
                                   default='ABC')
